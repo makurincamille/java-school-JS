@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vendor/handlebars.js"></script>
+    <script src="js/list.js"></script>
+</head>
+<body>
+
+<form name="addStudentForm" onsubmit="handleSubmit(event)">
+    Name:<input type="text" name="name" />
+    Surname:<input type="text" name="surname" />
+    <button type="submit">Add</button>
+</form>
+
+<form name="addStudentForm" onsubmit="handleSubmit(event)">
+    <button type="submit">Remove</button>
+</form>
+
+</body>
+
+<script id="user-list" type="text/x-handlebars-template">
+    <div class="user-list">
+        <h1>User list</h1>
+        <div>
+            {{{body}}}
+        </div>
+    </div>
+</script>
+
+<script id="user" type="text/x-handlebars-template">
+    <div class="user">
+        {{name}} {{surname}}
+    </div>
+</script>
+
+</html>
